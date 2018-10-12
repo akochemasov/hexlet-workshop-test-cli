@@ -6,9 +6,15 @@
   "engines": {
     "node": ">=4.2.4"
   },
+  "bin": {
+    "weather": "dist/bin/weather.js"
+  },
   "scripts": {
     "test": "mocha --reporter spec",
-    "cover": "node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- -R spec test/*"
+    "cover": "node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- -R spec test/*",
+    "babel-node": "babel-node",
+    "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
+    "prepublish": "npm run build" 
   },
   "repository": {
     "type": "git",
@@ -21,6 +27,10 @@
   },
   "homepage": "https://github.com/akochemasov/hexlet-workshop-test-cli#readme",
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-0": "^6.24.1",
     "chai": "^4.2.0",
     "coveralls": "^3.0.2",
     "istanbul": "^0.4.5",
