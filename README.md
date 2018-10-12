@@ -2,7 +2,7 @@
 ## Weather city
 
 ## Installation
-`npm install @akochemasov/hexlet-workshop-test-cli`
+`npm install -g hexlet-workshop-test-cli`
 
 ## Usage
 `weather Moscow`
