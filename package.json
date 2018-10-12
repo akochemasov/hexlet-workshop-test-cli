@@ -1,0 +1,26 @@
+{
+  "name": "hexlet-workshop-test-cli",
+  "version": "1.0.0",
+  "description": "hexlet workshop by testing",
+  "main": "index.js",
+  "engines": {
+    "node": ">=4.2.4"
+  },
+  "scripts": {
+    "test": "mocha --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akochemasov/hexlet-workshop-test-cli.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akochemasov/hexlet-workshop-test-cli/issues"
+  },
+  "homepage": "https://github.com/akochemasov/hexlet-workshop-test-cli#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0"
+  }
+}
