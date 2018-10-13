@@ -49,6 +49,7 @@
     "prettier": "^1.14.3"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "readline-sync": "^1.4.9"
   }
 }

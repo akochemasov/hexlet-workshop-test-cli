@@ -1,18 +1,12 @@
-const getCityWeather = (city) => {
-  let weather = '';
-  switch (city) {
-    case 'Moscow':
-      weather = '10';
-      break;
+import axios from 'axios';
 
-    case 'Piter':
-      weather = '3';
-      break;
-
-    default:
-      weather = 'not found';
+const getCityWeather = async (city) => {
+  const url = `https://www.metaweather.com/api/location/search/?query=${city}`;
+  const result = await axios.get(url);
+  if (result.data || result.data[0] || result.data[0].woeid) {
+    return result.data[0].woeid;
   }
-  return weather;
+  return 'not found';
 };
 
 export default getCityWeather;
