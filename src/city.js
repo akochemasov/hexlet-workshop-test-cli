@@ -1,5 +1,4 @@
 const getCityWeather = (city) => {
-  console.log(`Your city: ${city}`);
   let weather = '';
   switch (city) {
     case 'Moscow':
