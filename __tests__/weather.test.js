@@ -5,49 +5,33 @@ const url = 'https://www.metaweather.com/api/location/search';
 
 // test
 describe('weather Moscow', () => {
-	let scope;
+  nock(url)
+    .defaultReplyHeaders({ 'access-control-allow-origin': '*' })
+    .get('/?query=Moscow')
+    .reply(200, [
+      {
+        title: 'Moscow',
+        location_type: 'City',
+        woeid: 2122265,
+        latt_long: '55.756950,37.614971',
+      },
+    ]);
 
-	beforeAll(() => {
-		scope = nock(url)
-			.defaultReplyHeaders({ 'access-control-allow-origin': '*' })
-			.get('/?query=Moscow')
-			.reply(200, [
-				{
-					title: 'Moscow',
-					location_type: 'City',
-					woeid: 2122265,
-					latt_long: '55.756950,37.614971',
-				},
-			]);
-	});
-
-	afterAll(() => {
-		scope.cleanAll();
-	});
-
-	test('testing', async () => {
-		const result = await getCityWeather('Moscow');
-		expect(result).toBe(2122265);
-	});
+  test('testing', async () => {
+    const result = await getCityWeather('Moscow');
+    expect(result).toBe(2122265);
+  });
 });
 
 // test
 describe('weather Piter', () => {
-	let scope;
+  nock(url)
+    .defaultReplyHeaders({ 'access-control-allow-origin': '*' })
+    .get('/?query=Piter')
+    .reply(200, []);
 
-	beforeAll(() => {
-		scope = nock(url)
-			.defaultReplyHeaders({ 'access-control-allow-origin': '*' })
-			.get('/?query=Piter')
-			.reply(200, []);
-	});
-
-	afterAll(() => {
-		scope.cleanAll();
-	});
-
-	test('testing', async () => {
-		const result = await getCityWeather('Piter');
-		expect(result).toBe('not found');
-	});
+  test('testing', async () => {
+    const result = await getCityWeather('Piter');
+    expect(result).toBe('not found');
+  });
 });
