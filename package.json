@@ -1,6 +1,6 @@
 {
   "name": "hexlet-workshop-test-cli",
-  "version": "1.1.16",
+  "version": "1.1.17",
   "description": "hexlet workshop by testing",
   "main": "index.js",
   "engines": {
@@ -30,7 +30,6 @@
   },
   "homepage": "https://github.com/akochemasov/hexlet-workshop-test-cli#readme",
   "devDependencies": {
-    "@babel/polyfill": "^7.0.0",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-eslint": "^10.0.1",
@@ -53,6 +52,7 @@
     "prettier": "^1.14.3"
   },
   "dependencies": {
+    "@babel/polyfill": "^7.0.0",
     "axios": "^0.18.0",
     "lodash": "^4.17.11"
   }
