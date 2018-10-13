@@ -1,4 +1,3 @@
-const { test, expect } = require('jest');
 const getCityWeather = require('../src/index');
 
 test('test1', () => {
