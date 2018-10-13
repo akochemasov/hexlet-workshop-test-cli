@@ -1,9 +1,10 @@
 import axios from 'axios';
+import _ from 'lodash';
 
 const getCityWeather = async (city) => {
   const url = `https://www.metaweather.com/api/location/search/?query=${city}`;
   const result = await axios.get(url);
-  if (result.data && result.data[0] && result.data[0].woeid) {
+  if (_.has(result.data[0], 'woeid')) {
     return result.data[0].woeid;
   }
   return 'not found';
