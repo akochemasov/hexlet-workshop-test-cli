@@ -2,7 +2,7 @@ install:
 	npm install
 
 start:
-	npm run babel-node -- src/bin/weather.js Moscow
+	npm run babel-node -- src/bin/weather.js Piter
 
 publish:
 	npm publish
