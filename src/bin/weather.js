@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import getCity from '..';
+import getCityWeather from '..';
 
-getCity();
+getCityWeather();
