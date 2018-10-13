@@ -7,9 +7,8 @@ install:
   - npm install
 
 script:
-  - npm run cover
-
-after_script: "cat coverage/lcov.info | node_modules/coveralls/bin/coveralls.js"
+  - make lint
+  - make test
 
 notifications:
   email: false
