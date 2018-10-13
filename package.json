@@ -12,7 +12,7 @@
   "scripts": {
     "test-mocha": "mocha --reporter spec",
     "test": "jest",
-    "cover": "node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- -R spec test/*",
+    "cover": "node_modules/istanbul/lib/cli.js cover node_modules/jest/bin/ -- -R spec test/*",
     "babel-node": "babel-node",
     "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
     "prepare": "make lint && npm run build",
