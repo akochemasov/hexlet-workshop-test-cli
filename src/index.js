@@ -5,6 +5,7 @@ import '@babel/polyfill';
 const getCityWeather = async (city) => {
   const url = `https://www.metaweather.com/api/location/search/?query=${city}`;
   const result = await axios.get(url);
+  console.log(result);
   if (_.has(result.data[0], 'woeid')) {
     return result.data[0].woeid;
   }
