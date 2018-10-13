@@ -3,10 +3,11 @@ import getCityWeather from '../src';
 
 const url = 'https://www.metaweather.com/api/location/search';
 
+const nockRequest = () => nock(url).defaultReplyHeaders({ 'access-control-allow-origin': '*' });
+
 // test
 describe('weather Moscow', () => {
-  nock(url)
-    .defaultReplyHeaders({ 'access-control-allow-origin': '*' })
+  nockRequest()
     .get('/?query=Moscow')
     .reply(200, [
       {
@@ -25,8 +26,7 @@ describe('weather Moscow', () => {
 
 // test
 describe('weather Piter', () => {
-  nock(url)
-    .defaultReplyHeaders({ 'access-control-allow-origin': '*' })
+  nockRequest()
     .get('/?query=Piter')
     .reply(200, []);
 
