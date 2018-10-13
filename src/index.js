@@ -15,7 +15,10 @@ const getWeather = (city) => {
 
         // The whole response has been received. Print out the result.
         resp.on('end', () => {
-          console.log(`Weather in ${city} is`, JSON.parse(data)[0].woeid);
+          const weather = JSON.parse(data)[0]
+            ? JSON.parse(data)[0].woeid
+            : 'not found';
+          console.log(`Weather in ${city} is`, weather);
         });
       },
     )
@@ -27,8 +30,8 @@ const getWeather = (city) => {
 const getCityWeather = () => {
   const city = readlineSync.question('Enter the name of the city: ');
   console.log(`Your city: ${city}`);
-  getWeather(city);
-  // console.log(`Weather in ${city} is `, getWeather(city));
+  //   getWeather(city);
+  console.log('test', getWeather(city));
 };
 
 export default getCityWeather;
