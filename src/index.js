@@ -1,5 +1,6 @@
 import axios from 'axios';
 import _ from 'lodash';
+import '@babel/polyfill';
 
 const getCityWeather = async (city) => {
   const url = `https://www.metaweather.com/api/location/search/?query=${city}`;
