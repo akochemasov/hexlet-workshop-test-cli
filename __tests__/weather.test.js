@@ -1,4 +1,4 @@
-import getCityWeather from '../src/city';
+import getCityWeather from '../src';
 
 test('weather', () => {
   expect(getCityWeather('Moscow')).toBe('10');

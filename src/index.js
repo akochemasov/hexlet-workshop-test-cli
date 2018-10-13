@@ -1,4 +1,18 @@
-import half from './half';
-import getCityWeather from './city';
+const getCityWeather = (city) => {
+  let weather = '';
+  switch (city) {
+    case 'Moscow':
+      weather = '10';
+      break;
 
-export { half, getCityWeather };
+    case 'Piter':
+      weather = '3';
+      break;
+
+    default:
+      weather = 'not found';
+  }
+  return weather;
+};
+
+export default getCityWeather;
