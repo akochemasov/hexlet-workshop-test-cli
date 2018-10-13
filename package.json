@@ -15,7 +15,7 @@
     "babel-node": "babel-node",
     "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
     "prepare": "make lint && npm run build",
-    "eslint": "eslint src",
+    "eslint": "eslint src/",
     "precommit": "make lint"
   },
   "repository": {
@@ -38,9 +38,15 @@
     "coveralls": "^3.0.2",
     "eslint": "^5.7.0",
     "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-prettier": "^3.1.0",
     "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-prettier": "^3.0.0",
     "husky": "^1.1.2",
     "istanbul": "^0.4.5",
-    "mocha": "^5.2.0"
+    "mocha": "^5.2.0",
+    "prettier": "^1.14.3"
+  },
+  "dependencies": {
+    "readline-sync": "^1.4.9"
   }
 }

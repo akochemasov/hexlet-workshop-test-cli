@@ -1,2 +1,4 @@
 #!/usr/bin/env node
-console.log('Hello world');
+import getCity from '..';
+
+getCity();
