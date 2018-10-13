@@ -4,6 +4,9 @@ install:
 start:
 	npm run babel-node -- src/bin/weather.js Piter
 
+start-build:
+	npm run babel-node -- dist/bin/weather.js Moscow
+
 publish:
 	npm publish
 
